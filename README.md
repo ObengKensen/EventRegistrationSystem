@@ -1,1 +1,1 @@
-# EventPlannersystem ok readme
+# EventRegistrationSystem
