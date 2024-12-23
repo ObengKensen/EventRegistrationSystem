@@ -1,5 +1,4 @@
 import Header from "../../components/Header";
-import Footer from "../../components/Footer";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { AiOutlineDashboard,AiOutlineFileSearch,AiOutlineLogout,AiOutlineSchedule,AiOutlineBook  } from "react-icons/ai";
@@ -158,8 +157,6 @@ function adminEvents() {
                 <Events />
             </div>
           </div>
-
-        <Footer/>
     </div>
 
 )

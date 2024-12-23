@@ -1,5 +1,4 @@
 import Header from "../../components/Header";
-import Footer from "../../components/Footer";
 import axios from "axios";
 import { AiOutlineDashboard,AiOutlineFileSearch,AiOutlineLogout,AiOutlineSchedule,AiOutlineBook  } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -80,7 +79,6 @@ function AdminRegistered() {
             </div>
           </div>
 
-        <Footer/>
     </div>
 
 )
