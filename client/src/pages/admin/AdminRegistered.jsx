@@ -10,7 +10,7 @@ function AdminRegistered() {
   const [users, setUsers] = useState([])
 
   useEffect(() => {
-    axios.get("http://localhost:3000/users")
+    axios.get(`${import.meta.env.VITE_API_URL}/users`)
     .then(({data}) => {
       setUsers(data)
     })
@@ -39,9 +39,9 @@ function AdminRegistered() {
 
                 <ul className="list-none px-6 flex flex-col gap-y-4 ">
                     <li ><Link to={"/admin"} className="flex items-center gap-2 py-2 hover:bg-[rgba(0,0,0,0.3)] cursor-pointer"><AiOutlineDashboard />Dashboard</Link></li>
-                    <li><Link to={"/adminEvent"} className="flex items-center gap-2 py-2 py-2 hover:bg-[rgba(0,0,0,0.3)] cursor-pointer"><AiOutlineBook />Events</Link></li>
-                    <li><Link to={"/adminRegistered"} className="flex items-center gap-2 py-2 py-2 hover:bg-[rgba(0,0,0,0.3)] cursor-pointer"><AiOutlineFileSearch />Registered</Link></li>
-                    <li><Link to={"/admin"} className="flex items-center gap-2 py-2 py-2 hover:bg-[rgba(0,0,0,0.3)] cursor-pointer"><AiOutlineLogout />Logout</Link></li>
+                    <li><Link to={"/adminEvent"} className="flex items-center gap-2 py-2 hover:bg-[rgba(0,0,0,0.3)] cursor-pointer"><AiOutlineBook />Events</Link></li>
+                    <li><Link to={"/adminRegistered"} className="flex items-center gap-2 py-2 hover:bg-[rgba(0,0,0,0.3)] cursor-pointer"><AiOutlineFileSearch />Registered</Link></li>
+                    
                 </ul>
             </div>
 

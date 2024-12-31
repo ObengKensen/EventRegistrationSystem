@@ -14,7 +14,7 @@ const AdminPage = () => {
     const [events, setEvents] = useState([])
 
   useEffect(() => {
-    axios.get("http://localhost:3000/users")
+    axios.get(`${import.meta.env.VITE_API_URL}/users`)
     .then(({data}) => {
       setUsers(data)
     })
@@ -24,7 +24,7 @@ const AdminPage = () => {
   },[])
 
   useEffect(() => {
-    axios.get("http://localhost:3000/adminEvents")
+    axios.get(`${import.meta.env.VITE_API_URL}/adminEvents`)
     .then(({data}) => {
       setEvents(data)
     })
@@ -74,7 +74,6 @@ const AdminPage = () => {
                         <li ><NavLink to={"/admin"} className="flex items-center gap-2 py-2 hover:bg-[rgba(0,0,0,0.3)] cursor-pointer"><AiOutlineDashboard />Dashboard</NavLink></li>
                         <li><NavLink to={"/adminEvent"} className="flex items-center gap-2 py-2 py-2 hover:bg-[rgba(0,0,0,0.3)] cursor-pointer"><AiOutlineBook />Events</NavLink></li>
                         <li><NavLink to={"/adminRegistered"} className="flex items-center gap-2 py-2 py-2 hover:bg-[rgba(0,0,0,0.3)] cursor-pointer"><AiOutlineFileSearch />Registered</NavLink></li>
-                        <li><NavLink to={"/admin"} className="flex items-center gap-2 py-2 py-2 hover:bg-[rgba(0,0,0,0.3)] cursor-pointer"><AiOutlineLogout />Logout</NavLink></li>
                     </ul>
                 </div>
 
