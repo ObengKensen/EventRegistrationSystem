@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon server.js",
-    "build": "no need for build"
+    "build": ""
   },
   "keywords": [],
   "author": "",
