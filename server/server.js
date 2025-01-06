@@ -13,9 +13,9 @@ const app = express();
 dotenv.config();
 const port = process.env.PORT || 3000;
 
-const allowedOrigins = [process.env.CLIENT_URL, "https://event-registration-system-zeta.vercel.app/", 'http://localhost:5173']
+
 app.use(cors({
-    origin: allowedOrigins,
+    origin: [process.env.CLIENT_URL, "https://event-registration-system-zeta.vercel.app/", 'http://localhost:5173'],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
